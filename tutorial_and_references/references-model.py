@@ -23,6 +23,12 @@ class Customer(models.Model):
     class Meta:
         verbose_name_plural = "2. Customers" 
         verbose_name = "Customer"
+        unique_together = (
+             ('field1', 'field2',)
+        )
+        index_together = (
+        ('field1', 'field2',)
+        )
         ordering = ('name',)
 
 
